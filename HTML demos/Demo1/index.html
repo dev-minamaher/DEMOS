@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <style>
+            * {
+                border: 1px black solid;
+            }
+            .ko {
+                color: red;
+            }
+
+            body a {
+                color: orange
+            }
+
+            /*  
+                (specifity)
+                inhert
+                defaul
+                *universal
+                tag (1)
+                .class / [attribute] (10)
+                #id (100)
+                inline (1000)
+                !important
+                order (tie-breaker)
+
+                (combination) (add)
+                selector space selector --> inderect child
+                selector > selector --> direct child
+                selector + selector --> direct sibling
+                selector ~ selector --> indirect sibling
+                selector concat class / attribute / id --> having
+                selector :: psudo element --> special
+                selector : psudo class --> in state
+            */
+            
+        </style>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="c2" id="j">mina</div>
+        <div class="c2">maher
+            <p class="c1">hi</p>
+        </div>
+        <span>ahmed</span>
+        <ins>ali</ins>
+        <span>assad</span>
+        <p class="ko">this is a <a class="ho" id="no" href="">link</a></p>
+    </body>
+
+</html>
