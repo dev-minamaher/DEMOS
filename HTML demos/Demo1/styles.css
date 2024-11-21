@@ -1,0 +1,33 @@
+/*  
+    (specifity)
+    inhert
+    defaul
+    *universal
+    tag (1)
+    .class / [attribute] (10)
+    #id (100)
+    inline (1000)
+    !important
+    order (tie-breaker)
+
+    (combination) (add)
+    selector space selector --> inderect child
+    selector > selector --> direct child
+    selector + selector --> direct sibling
+    selector ~ selector --> indirect sibling
+    selector concat class / attribute / id --> having
+    selector :: psudo element --> special
+    selector : psudo class --> in state
+*/
+
+* {
+    border: 1px black solid;
+}
+.ko {
+    color: red;
+}
+
+body a {
+    color: orange
+}
+
