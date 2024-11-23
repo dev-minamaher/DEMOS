@@ -1,4 +1,9 @@
 /*  
+    rule --> selector {decleration block}
+    decleration block --> decleration ; decleration
+    decleration --> property : value
+    selectors -->
+
     (specifity)
     inhert
     defaul
@@ -18,6 +23,9 @@
     selector concat class / attribute / id --> having
     selector :: psudo element --> special
     selector : psudo class --> in state
+
+    (multiple selection)
+    selector , selector
 */
 
 * {
