@@ -1,2 +1,2 @@
-# SD45
-Demos
+# DEMOS
+Tech demoes made by and for ITI - SD45 students
