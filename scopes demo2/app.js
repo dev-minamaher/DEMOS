@@ -6,7 +6,8 @@
 
 // but their definition remains in memory even after their block of decleration is excuted
 
-// blockFunc() // type error
+console.log(blockFunc) // undefined
+// blockFunc() // type error --> not a function
 {
     blockFunc() // "I can be invoked from here"
     function blockFunc() {
@@ -38,18 +39,19 @@ outerFunc()
 // varFunc() // type error
 {
     // varFunc() // type error
-    var varFunc = function() {console.log("I'm a function expression")}
+    var varFunc = function fun() {console.log("I'm a function expression")}
+    // fun() reference error
     varFunc() // "I'm a function expression"
 }
 varFunc() // "I'm a function expression"
 
 // let and const are block scoped and enter TDZ
 
-// letFunc() // reference error
-// constFunc() // reference error
+// letFunc() // reference error --> not defined
+// constFunc() // reference error --> not defined
 {
-    // letFunc() // reference error
-    // constFunc() // reference error
+    // letFunc() // reference error --> not assigned
+    // constFunc() // reference error --> not assigned
     let letFunc = () => {console.log("I'm an arrow function")}
     const constFunc = () => {console.log("I'm an arrow function")}
     letFunc()

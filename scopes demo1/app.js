@@ -49,3 +49,14 @@ testVar()
 // any variable declared outside all fuctions and blocks (for block scoped variables)
 // is globally scoped can be accessed anywhere in the code
 // var variables are hoisted, let and const are in TDZ untill their line of decleration
+
+// let x = 2;
+// let y = 1;
+
+// if (x > y) {
+//     let m = 10;
+// } else {
+//     let z = 11;
+// }
+
+// console.log(m ,z);
