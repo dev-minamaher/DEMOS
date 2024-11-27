@@ -8,18 +8,18 @@
 // they are hoisted to the top of their block but not initialized
 // they enter TDZ (temporary dead zone) until their line of decleration
 
-// console.log(letVar); // reference error
-// console.log(conVar); // reference error
+// console.log(letVar); // reference error --> not defined
+// console.log(conVar); // reference error --> not defined
 {
-    // console.log(letVar); // reference error
-    // console.log(conVar); // reference error
+    // console.log(letVar); // reference error --> not initialized
+    // console.log(conVar); // reference error --> not initialized
     let letVar = "I'm block scoped";
     const conVar = "I'm block scoped";
     console.log(letVar); // "I'm block scoped"
     console.log(conVar); // "I'm block scoped"
 }
-// console.log(letVar); // reference error
-// console.log(conVar); // reference error
+// console.log(letVar); // reference error --> not defined
+// console.log(conVar); // reference error --> not defined
 
 // local scope:
 // func() {declared within the body of a function}
@@ -35,14 +35,14 @@ console.log(varVar); // undefined
 }
 console.log(varVar); // "I'm locally scoped"
 
-// console.log(varVar2); // refrerence error
+// console.log(varVar2); // refrerence error --> not defined
 function testVar() {
     console.log(varVar2); // undefined
     var varVar2 = "I'm locally scoped"
     console.log(varVar2); // "I'm locally scoped"
 }
 testVar()
-// console.log(varVar2); // refrerence error
+// console.log(varVar2); // refrerence error --> not defined
 
 // global scope:
 

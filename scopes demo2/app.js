@@ -1,10 +1,11 @@
 // scopes:
 // block -> local(function) -> global(module) -> global(script)
 
-// functions are block scoped and hoisted
+// the refrence to the function is like var variables locally scoped and hoisted
+// function definition is block scoped and hoisted
 // they can be invoked before their decleration within their block of decleration
 
-// but their definition remains in memory even after their block of decleration is excuted
+// but after the block is excuted their definition remains in memory even after their block of decleration is excuted
 
 console.log(blockFunc) // undefined
 // blockFunc() // type error --> not a function
@@ -17,9 +18,9 @@ console.log(blockFunc) // undefined
 }
 blockFunc() // "I can be invoked from here"
 
-// but they can't do the same if declared within another function
+// but they can't do the same if declared within another function as the refrence is locally scoped
 
-// innerFunc() // reference error
+// innerFunc() // reference error --> not defined
 function outerFunc() {
     innerFunc() // "I'm an inner function"
     function innerFunc() {
@@ -28,7 +29,7 @@ function outerFunc() {
     innerFunc() // "I'm an inner function"
 }
 outerFunc()
-// innerFunc() // reference error
+// innerFunc() // reference error --> not defined
 
 // function expressions/ arrow functions
 // declared with var/ let/ const
