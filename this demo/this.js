@@ -84,4 +84,4 @@ let o2 = new boundSetOne();
 console.log(o1.id); // 5
 console.log(o2.id); // 1 new is stronger than hard binding
 
-// new > explicit > implicit > fallback
+// default < implicit (caller) < explicit (call, apply) < explicit (hard binding) (bind) < new
