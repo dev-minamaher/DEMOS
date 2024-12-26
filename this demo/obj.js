@@ -1,6 +1,6 @@
 // [[prototype]] linking
 
-let object1 = {
+let object1 = { // ---> Object
     a: 1,
     c: 3
 }
@@ -26,7 +26,7 @@ Object.defineProperty(object2, 'b', {
     value: 4 // override this behaviour
 })
 console.log(object2.b); // now its 4
-
+// RHL
 console.log(object2.c); // 3
 object1.c = 8;
 console.log(object2.c); // 8 delegation results in dynamically linked objects
@@ -38,11 +38,16 @@ function creator(x) {
 }
 
 creator.prototype.alpha = "mina";
+// prototype linked to --> creator.prototype {constructor: creator}
 
 let obj = new creator(5); // but this is a constructor call because of the new keyword
 
-console.log(obj.a);
-console.log(obj.alpha);
+
+// obj = {}
+// creator.call(obj) // obj.a = 5
+
+console.log(obj.a); // 5
+console.log(obj.alpha); // mina
 
 console.log(obj.hasOwnProperty('a')); // a is found in obj directly
 console.log(obj.hasOwnProperty('alpha')); // alpha is found in creator.prototype via [[prototype]] delegation
